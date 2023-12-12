@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Now</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://kit.fontawesome.com/151932cd13.js">
+    <link rel="shortcut icon" href="./yu,mmmmm.jpeg" type="image/x-icon">
+</head>
+<script src="https://kit.fontawesome.com/151932cd13.js" crossorigin="anonymous"></script> 
+<body>
+    <header>
+        <!--logo-->
+        <img  class="logo" src="cinnamon-lakeside-colombo-logo-vector-xs.png" alt="logo">
+        <!--Navigation Bar-->
+            <nav>
+                <ul class="navbar">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="branches.html">Branches</a></li>
+                    <!--<ul>
+                        <li><a href="wedding.html">Wedding</a></li>
+                        <li><a href="wedding.html">Wedding</a></li>
+                    </ul>-->
+                    <li><a href="event.html">Events</a></li>
+                    <li><a href="dining.html">Dining</a></li>
+                    <li><a href="explore.html">Explore</a></li>
+                </ul>
+            </li>
+            </nav>
+            <button id="button"><a href="./newbooking.htm">Book Now</a></button>        </header>
+        
+    </style>
+</head>
+<!--Booking Form-->
+
+<body id="newbook">
+    <form action="" id="bookingForm" method="post">
+        <h2>Bookings & Reservations </h2>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="mobile">Mobile Number:</label>
+        <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="checkin">Check-in Date:</label>
+        <input type="date" id="checkin" name="checkin" required>
+
+        <label for="checkout">Check-out Date:</label>
+        <input type="date" id="checkout" name="checkout" required>
+
+        <label for="singleRooms">Number of Single Rooms: LKR 25,000</label>
+        <input type="number" id="singleRooms" name="singleRooms" min="0" max="10" value="0">
+
+        <label for="doubleRooms">Number of Double Rooms: LKR 35,000</label>
+        <input type="number" id="doubleRooms" name="doubleRooms" min="0" value="0">
+
+        <label for="tripleRooms">Number of Triple Rooms: LKR 40,000</label>
+        <input type="number" id="tripleRooms" name="tripleRooms" min="0" value="0">
+
+        <label for="extraBed">Extra Bed: LKR 8,000</label>
+        <input type="number" id="extraBed" name="extraBed" min="0">
+
+        <label for="adults">Number of Adults:</label>
+        <input type="number" id="adults" name="adults" min="1" required>
+
+        <label for="children">Number of Children:</label>
+        <input type="number" id="children" name="children" min="0">
+
+        <label for="promoCode">Promo Code:</label>
+        <input type="number" id="promoCode" name="promoCode" min="0">
+
+        <label for="Meals">Meals (Kids Above 5 years):</label>
+        <input type="number" id="Meals" name="children" min="0" value="0">
+
+        <label>Preferences:</label>
+        <input type="checkbox" id="poolView" name="preferences[]" value="poolView">
+        <label for="poolView">Pool View</label>
+
+        <input type="checkbox" id="gardenView" name="preferences[]" value="gardenView">
+        <label for="gardenView">Garden View</label>
+
+        <input type="checkbox" id="wifi" name="preferences[]" value="wifi">
+        <label for="wifi">Wi-Fi</label>
+
+        <button id="booking">Book Now </button>
+        <button id="LoyaltyCheck">Check Loyalty</button>
+
+
+    </form>
+
+<!--Adventure Booking form-->
+
+    <form action="" id="AdvbookingForm" method="post">
+        <h2>Adventure Booking </h2>
+        <label for="name">Name:</label>
+        <input type="text" id="Advname" name="name" required>
+
+        <label for="localAdult">Local Adult : LKR 5000</label>
+        <input type="number" id="AdvlocalAdult" name="AdvlocalAdult" min="0">
+
+        <label for="ForeignAdult">Foreign Adult : LKR 10000</label>
+        <input type="number" id="AdvforeingnAdult" name="AdvforeignAdult" min="0">
+
+        <label for="localKid">Local Kid : LKR 2000</label>
+        <input type="number" id="AdvlocalKid" name="localKid" min="0">
+
+        <label for="foreignKid">Foreign Kid : LKR 5000</label>
+        <input type="number" id="AdvforeignKid" name="foreignKid" min="0">
+
+        <label>Preferences:</label>
+        <input type="checkbox" id="GuideAdult" name="preferences[]" value="GuideAdult">
+        <label for="GuideAdult">Guide for Adult</label>
+
+        <input type="checkbox" id="GuideKid" name="preferences[]" value="GuideKid">
+        <label for="GuideKid">Guide for Kids</label>
+
+        <button id="AdvbookNow">Book Adventure </button>
+        <button id="Favorites">Add to Favorites</button>
+
+
+        
+    </form>
+
+</body>
+</html>
+
+
+
+    <!-- Current Booking Table -->
+    <section id="currentBooking">
+        <h2>Current Booking</h2>
+        
+        <table>
+            <tr>
+                <th>Category</th>
+                <th>Details/Quantity</th>
+            </tr>
+            <tr>
+                <td>Name</td>
+                <td id="currentBookingName"></td>
+            </tr>
+            <tr>
+                <td>Mobile Number</td>
+                <td id="currentBookingMobile"></td>
+            </tr>
+
+            <tr>
+                <td>Email</td>
+                <td id="currentBookingEmail"></td>
+            </tr>
+            <tr>
+                <td>Check-In Date</td>
+                <td id="CheckInDate"></td>
+            </tr>
+            <tr>
+                <td>Check-Out Date</td>
+                <td id="CheckOutDate"></td>
+            </tr>
+            <tr>
+                <td>No.of Single Room</td>
+                <td id="SingleRoom"></td>
+            </tr>
+            <tr>
+                <td>No.of Double Room</td>
+                <td id="DoubleRoom"></td>
+            </tr>
+            <tr>
+                <td>No.of Triple Room</td>
+                <td id="TripleRoom"></td>
+            </tr>
+
+            <tr>
+                <td>Extra Bed</td>
+                <td id="extraBed"></td>
+            </tr>
+            <tr>
+                <td>Nmber Of Adults</td>
+                <td id="NumberofAdults"></td>
+            </tr>
+            <tr>
+                <td>Nmber Of Children</td>
+                <td id="NumberofChildren"></td>
+            </tr>
+            <tr>
+                <td>Promo Code</td>
+                <td id="PromoCode"></td>
+            </tr>
+            <tr>
+                <td>Pool View</td>
+                <td id="poolView"></td>
+            </tr>
+            <tr>
+                <td>Garden View</td>
+                <td id="GardenView"></td>
+            </tr>
+            <tr>
+                <td>WiFi </td>
+                <td id="WiFi"></td>
+            </tr>
+            <tr>
+                <td>Meals(Kids Above 5 years):</td>
+                <td id="MealsTable"></td>
+            </tr>
+        </table>
+    </section>
+<!--Adventure Current Booking-->
+    <table>
+    <section id="AdvcurrentBooking"></section>
+        <h2>Adventure Booking</h2>
+        <tr>
+            <th>Category</th>
+            <th>Details/Quantity</th>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td id="AdvBookingName"></td>
+        </tr>
+        <tr>
+            <td>Local Adult</td>
+            <td id="AdvBookingLocalA"></td>
+        </tr>
+        <tr>
+            <td>Foreign Adult</td>
+            <td id="AdvBookingForeignA"></td>
+        </tr>
+        <tr>
+            <td>Local kid Above 5 years</td>
+            <td id="AdvBookingLocalKid"></td>
+        </tr>
+        <tr>
+            <td>Foreign Kids</td>
+            <td id="AdvBookingForeignkids"></td>
+        </tr>
+        <tr>
+            <td>Guide for Adult</td>
+            <td id="AdvBookingGuideAdults"></td>
+        </tr>
+        <tr>
+            <td>Guide for kids</td>
+            <td id="AdvBookingGuidekids"></td>
+        </tr>
+    </table>
+
+    <!-- Overall Booking Table -->
+    <section id="overallBooking">
+        <h2>Overall Booking</h2>
+        <table>
+            <tr>
+                <th>Category</th>
+                <th>Details/Quantity</th>
+            </tr>
+            <tr>
+                <td>Total Hotel Cost</td>
+                <td id="totalHotelCost"></td>
+            </tr>
+            <tr>
+                <td>Total Adventure Cost</td>
+                <td id="totalAdventureCost"></td>
+            </tr>
+            <tr>
+                <td>Total Cost</td>
+                <td id="totalCost"></td>
+            </tr>
+        </table>
+    </section>  
+    </body>
+    <script src="script.js"></script>
+</body>
